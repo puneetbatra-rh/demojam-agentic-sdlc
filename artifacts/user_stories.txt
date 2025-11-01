@@ -1,0 +1,9 @@
+📘 User Stories
+========================================
+
+1. *As a prospective home loan customer, I want to navigate to a dedicated Home Loan application page on XYZ Bank's website so that I can easily find and access the application process.*
+2. *As a prospective home loan customer, I want to provide my personal and financial details through an online application form so that I can initiate the home loan application process.*
+3. *As a bank administrator, I want to receive and review home loan applications submitted through the website so that I can efficiently process and verify customer applications.*
+4. *As a prospective home loan customer, I want to upload required documents (e.g., income proof, ID proof) to support my home loan application so that I can ensure all necessary documentation is submitted.*
+5. *As a prospective home loan customer, I want to track the status of my home loan application in real-time so that I can stay informed about the progress and any additional requirements.*
+6. *As a bank administrator, I want to send automated notifications to customers regarding the status updates of their home loan applications so that customers are kept informed throughout the process.*

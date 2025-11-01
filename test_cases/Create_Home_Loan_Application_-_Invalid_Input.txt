@@ -1,0 +1,13 @@
+[Test Case Name]: Create Home Loan Application - Invalid Input
+
+[Description]:
+Validates system's behavior when customer details are missing.
+
+[Test Type]: Negative
+
+[Test Steps]:
+1. Send POST request to /applications with missing customer details
+2. Observe API response
+
+[Expected Result]:
+400 Bad Request with validation error message

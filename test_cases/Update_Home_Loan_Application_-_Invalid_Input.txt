@@ -1,0 +1,13 @@
+[Test Case Name]: Update Home Loan Application - Invalid Input
+
+[Description]:
+Validates system's behavior when application ID is invalid.
+
+[Test Type]: Negative
+
+[Test Steps]:
+1. Send PATCH request to /applications with invalid application ID
+2. Observe API response
+
+[Expected Result]:
+404 Not Found with error message

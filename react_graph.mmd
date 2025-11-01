@@ -1,0 +1,46 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	User\20Requirements(User Requirements)
+	Auto-generate\20User\20Stories(Auto-generate User Stories)
+	Human\20User\20Story\20Approval(Human User Story Approval<hr/><small><em>__interrupt = before</em></small>)
+	Create\20Design\20Document(Create Design Document)
+	Human\20Design\20Document\20Review(Human Design Document Review<hr/><small><em>__interrupt = before</em></small>)
+	Generate\20Code(Generate Code)
+	Human\20Code\20Review(Human Code Review<hr/><small><em>__interrupt = before</em></small>)
+	Security\20Review(Security Review)
+	Human\20Security\20Review(Human Security Review<hr/><small><em>__interrupt = before</em></small>)
+	Write\20Test\20Cases(Write Test Cases)
+	Human\20Test\20Cases\20Review(Human Test Cases Review<hr/><small><em>__interrupt = before</em></small>)
+	QA\20Testing(QA Testing)
+	Human\20QA\20Review(Human QA Review<hr/><small><em>__interrupt = before</em></small>)
+	Deployment(Deployment)
+	__end__([<p>__end__</p>]):::last
+	Auto-generate\20User\20Stories --> Human\20User\20Story\20Approval;
+	Create\20Design\20Document --> Human\20Design\20Document\20Review;
+	Generate\20Code --> Human\20Code\20Review;
+	Human\20Code\20Review -. &nbsp;Denied&nbsp; .-> Generate\20Code;
+	Human\20Code\20Review -. &nbsp;Approve&nbsp; .-> Security\20Review;
+	Human\20Design\20Document\20Review -. &nbsp;Denied&nbsp; .-> Create\20Design\20Document;
+	Human\20Design\20Document\20Review -. &nbsp;Approve&nbsp; .-> Generate\20Code;
+	Human\20QA\20Review -. &nbsp;Approve&nbsp; .-> Deployment;
+	Human\20QA\20Review -. &nbsp;Denied&nbsp; .-> Generate\20Code;
+	Human\20Security\20Review -. &nbsp;Denied&nbsp; .-> Generate\20Code;
+	Human\20Security\20Review -. &nbsp;Approve&nbsp; .-> Write\20Test\20Cases;
+	Human\20Test\20Cases\20Review -. &nbsp;Approve&nbsp; .-> QA\20Testing;
+	Human\20Test\20Cases\20Review -. &nbsp;Denied&nbsp; .-> Write\20Test\20Cases;
+	Human\20User\20Story\20Approval -. &nbsp;Denied&nbsp; .-> Auto-generate\20User\20Stories;
+	Human\20User\20Story\20Approval -. &nbsp;Approve&nbsp; .-> Create\20Design\20Document;
+	QA\20Testing --> Human\20QA\20Review;
+	Security\20Review --> Human\20Security\20Review;
+	User\20Requirements --> Auto-generate\20User\20Stories;
+	Write\20Test\20Cases --> Human\20Test\20Cases\20Review;
+	__start__ --> User\20Requirements;
+	Deployment --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

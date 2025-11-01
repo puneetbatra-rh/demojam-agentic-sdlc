@@ -1,0 +1,15 @@
+[Test Case Name]: Create Document - Valid Input
+
+[Description]:
+Tests whether creating a document returns correct results with valid input.
+
+[Test Type]: Unit
+
+[Test Steps]:
+1. Create a home loan application
+2. Send POST request to /documents with valid document details
+3. Verify document is created in database
+4. Receive response
+
+[Expected Result]:
+JSON response with document ID, application ID, document type, and document URL

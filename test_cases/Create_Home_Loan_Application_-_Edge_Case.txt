@@ -1,0 +1,14 @@
+[Test Case Name]: Create Home Loan Application - Edge Case
+
+[Description]:
+Tests whether creating a home loan application returns correct results with edge case input.
+
+[Test Type]: Unit
+
+[Test Steps]:
+1. Send POST request to /applications with very long customer name
+2. Verify application is created in database
+3. Receive response
+
+[Expected Result]:
+JSON response with application ID, customer name, email, and phone number

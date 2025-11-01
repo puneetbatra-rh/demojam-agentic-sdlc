@@ -1,0 +1,15 @@
+[Test Case Name]: Update Home Loan Application - Valid Input
+
+[Description]:
+Tests whether updating a home loan application returns correct results with valid input.
+
+[Test Type]: Unit
+
+[Test Steps]:
+1. Create a home loan application
+2. Send PATCH request to /applications with updated customer details
+3. Verify application is updated in database
+4. Receive response
+
+[Expected Result]:
+JSON response with updated application ID, customer name, email, and phone number

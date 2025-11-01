@@ -1,0 +1,13 @@
+[Test Case Name]: Create Document - Invalid Input
+
+[Description]:
+Validates system's behavior when document details are missing.
+
+[Test Type]: Negative
+
+[Test Steps]:
+1. Send POST request to /documents with missing document details
+2. Observe API response
+
+[Expected Result]:
+400 Bad Request with validation error message

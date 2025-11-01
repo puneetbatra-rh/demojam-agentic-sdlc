@@ -1,0 +1,14 @@
+[Test Case Name]: Get Home Loan Application - Valid Input
+
+[Description]:
+Tests whether getting a home loan application returns correct results with valid input.
+
+[Test Type]: Unit
+
+[Test Steps]:
+1. Create a home loan application
+2. Send GET request to /applications with application ID
+3. Receive response
+
+[Expected Result]:
+JSON response with application ID, customer name, email, and phone number

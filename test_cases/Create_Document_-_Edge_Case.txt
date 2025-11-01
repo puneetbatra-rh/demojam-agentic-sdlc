@@ -1,0 +1,15 @@
+[Test Case Name]: Create Document - Edge Case
+
+[Description]:
+Tests whether creating a document returns correct results with edge case input.
+
+[Test Type]: Unit
+
+[Test Steps]:
+1. Create a home loan application
+2. Send POST request to /documents with very long document URL
+3. Verify document is created in database
+4. Receive response
+
+[Expected Result]:
+JSON response with document ID, application ID, document type, and document URL
